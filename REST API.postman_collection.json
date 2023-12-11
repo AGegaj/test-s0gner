@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "7f8da514-f128-4d76-b024-73d5a0459b74",
+		"name": "REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11580253"
+	},
+	"item": [
+		{
+			"name": "Sign test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"questions\": [\"q1\", \"q2\"],\r\n    \"answers\":[\"a1\", \"a2\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/signature/sign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signature",
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verity signed test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/signature/verify/1/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50VGltZSI6MTcwMjMxNDg2OSwidXNlcklEIjoiMSJ9.DtVhB0s8B6b1LAIYBs4B2UZm7HGwnlzYs9VDtyHvt_4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signature",
+						"verify",
+						"1",
+						"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50VGltZSI6MTcwMjMxNDg2OSwidXNlcklEIjoiMSJ9.DtVhB0s8B6b1LAIYBs4B2UZm7HGwnlzYs9VDtyHvt_4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
